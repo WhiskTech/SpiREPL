@@ -1,0 +1,23 @@
+{
+  "name": "spirepl",
+  "version": "0.0.2",
+  "description": "Live REPL that updates with your code",
+  "main": "spirepl.js",
+  "bin": {
+    "spirepl": "spirepl.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/WhiskTech/SpiREPL"
+  },
+  "keywords": [
+    "repl",
+    "reload",
+    "injection"
+  ],
+  "author": "whiskers75",
+  "license": "ISC"
+}
