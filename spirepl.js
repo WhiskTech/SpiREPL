@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 var g = global;
 g.require = require;
+g.require.main.paths.push(process.env.PWD);
 var repl = require('repl');
 var fs = require('fs');
 var vm = require('vm');
