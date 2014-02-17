@@ -2,9 +2,13 @@
 var g = global;
 var repl = require('repl');
 var resolve = require('resolve');
-g.require = function(file) {
+var path = require('path');
+g.require = function(name) {
     return require(resolve.sync(name, {basedir: path.dirname(file)}));
 }
+g.module = { exports: {} }
+g.exports = g,module.exports;
+
 var fs = require('fs');
 var vm = require('vm');
 var context = {};
@@ -27,7 +31,7 @@ function reload() {
         }
         catch (error) {
             console.log('\n' + error.stack + '\n')
-        }   
+        }
     });
 }
 
