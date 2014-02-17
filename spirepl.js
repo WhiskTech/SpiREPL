@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 var g = global;
-g.require = require;
-g.require.main.paths.push(process.env.PWD);
 var repl = require('repl');
+var resolve = require('resolve');
+g.require = function(file) {
+    return require(resolve.sync(name, {basedir: path.dirname(file)}));
+}
 var fs = require('fs');
 var vm = require('vm');
 var context = {};
