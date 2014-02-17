@@ -19,10 +19,10 @@ function reload() {
             throw err;
         }
         try {
-        vm.runInContext(res, r.context);
+            vm.runInContext(res, r.context, res);
         }
         catch (error) {
-            console.log('\n\n\nError reloading file.\n' + error + '\nFix it! :P')
+            console.log('\n' + error.stack + '\n')
         }   
     });
 }

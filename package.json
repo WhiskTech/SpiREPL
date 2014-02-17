@@ -1,6 +1,6 @@
 {
   "name": "spirepl",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Live REPL that updates with your code",
   "main": "spirepl.js",
   "bin": {
