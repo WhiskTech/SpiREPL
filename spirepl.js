@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var g = global;
+g.require = require;
 var repl = require('repl');
 var fs = require('fs');
 var vm = require('vm');
